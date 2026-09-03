@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
