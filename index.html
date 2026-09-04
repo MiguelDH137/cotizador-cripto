@@ -8,23 +8,69 @@
 </head>
 <body>
     
-    <div id="container-img">
-        <img src="" alt="">
-    </div>
+    <div id="container-body">
 
-    <div id="container-cripto">
-
-        <div id="cripto-form">
+        <!-- Seccion izquierda -->
+        <div id="container-img">
+            <img src="" alt="">
+        </div>
+    
+        <!-- Seccion Derecha -->
+        <div id="container-cripto">
             
-        </div>
+            <!-- Formulario de datos -->
+            <form id="cripto-form">
 
-        <div id="cripto-info">
-
+                <!-- Menu de monedas -->
+                <div class="form-input-container">
+                    <label for="coin">Selecciona Tu Moneda</label>
+                    <select class="form-input" id="select-coin">
+                        <option value="" selected disabled>Selecciona una moneda</option>
+                        <option value="USD">Dolar Estadounidense</option>
+                        <option value="EUR">Euro</option>
+                        <option value="ARS">Pesos Argentinos</option>
+                        <option value="VES">Bolivares</option>
+                    </select>
+                </div>
+                
+                <!-- menu de cryptos -->
+                <div class="form-input-container">
+                    <label for="crypto">Selecciona Tu Cryptomoneda</label>
+                    <select class="form-input" id="select-crypto">
+                        <option value="" selected disabled>Selecciona una crypto</option>
+                        <option value="BTC">Bitcoin</option>
+                        <option value="ETH">Ethereum</option>
+                        <option value="AXS">AXS</option>
+                        <option value="BNB">Binance Coin</option>
+                    </select>
+                </div>
+                
+                <!-- Input de montos -->
+                <div class="form-input-container">
+                    <label for="crypto">Ingresa Un Monto</label>
+                    <input type="number" class="form-input" id="amount" placeholder="Monto">
+                </div>
+                
+                <!-- Boton para subir el formulario -->
+                <div class="form-btn-container">
+                    <button id="form-btn" type="submit">COTIZAR</button>
+                </div>
+            </form>
+    
+            <!-- Seccion de informacion devuelta por el formulario -->
+            <div id="cripto-info">
+                <p class="info-p">El precio es:<span class="price"></span></p>
+                <p class="info-p">El precio mas alto es: <span class="price"></span></p>
+                <p class="info-p">El precio mas bajo es: <span class="price"></span></p>
+                <p class="info-p">Variacion de 24h: <span class="price"></span></p>
+                <p class="info-p">Puede comprar: <span class="price"></span></p>
+            </div>
+    
         </div>
 
     </div>
 
 
-    <script src="/script.js"></script>
 </body>
+<script src="/script.js"></script>
 </html>
