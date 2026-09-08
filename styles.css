@@ -7,4 +7,158 @@
 body {
     margin: 0;
     font-family: sans-serif;
+    background-color: #0f172b;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: #fe9a00;
+    margin-bottom: 50px;
+    margin-top: 25px;
+}
+
+#container-body {
+    display: flex;
+    width: 100%;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-img {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container-img img {
+    width: 100%;
+}
+
+#container-cripto {
+    display: flex;
+    align-items: stretch;
+    justify-content: start;
+    width: 50%;
+    gap: 60px;
+}
+
+#crypto-form {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    width: auto;
+    height: auto;
+    gap: 20px;
+    padding: 25px;
+    background: #58168b6b;
+
+    border-radius: 16px;
+}
+
+#crypto-form:hover {
+    box-shadow: 0px 0px 30px 5px #fe9a00;
+}
+
+.form-input-container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    gap: 15px;
+}
+
+.form-input {
+    border-radius: 16px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.form-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+#form-btn {
+    border-radius: 16px;
+    padding: 10px 30px;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    background-color: #3498db;
+}
+
+#form-btn:hover {
+    background: #fe9a00;
+}
+
+#crypto-info {
+    flex: 1 1 0;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 25px;
+    font-weight: bold;
+
+    background: #58168b6b;
+    border-radius: 16px;
+}
+
+#crypto-info:hover {
+    box-shadow: 0px 0px 30px 5px #fe9a00;
+}
+
+#crypto-info p:hover {
+    color: #3498db;
+}
+
+#crypto-info h3 {
+    display: flex;
+    justify-content: center;
+}
+
+.loader {
+    margin: auto;
+    border: 16px solid #f3f3f3;
+    /* Light grey */
+    border-top: 16px solid #3498db;
+    /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 600px) {
+    #container-body {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    #container-img {
+        width: 90%;
+    }
+
+    #container-cripto {
+        flex-direction: column;
+        width: 90%;
+    }
 }

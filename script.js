@@ -3,16 +3,49 @@ const cryptoForm = document.querySelector('#crypto-form');
 const selectCoin = document.querySelector('#select-coin');
 const selectCrypto = document.querySelector('#select-crypto');
 const inputAmount = document.querySelector('#amount');
+const cryptoInfo = document.querySelector('#crypto-info')
 
 // ========== EVENTOS ========== //
-cryptoForm.addEventListener('submit', (e) => {
+cryptoForm.addEventListener('submit', async (e) => {
     // Evita que se reinicie la pagina al subir el formulario
     e.preventDefault();
 
     const coinSelected = [...selectCoin.children].find(Option => Option.selected).value;
     const cryptoSelected = [...selectCrypto.children].find(Option => Option.selected).value;
-    const inputAmountValue = inputAmount.value;
+    const inputAmountValue = parseFloat(inputAmount.value);
 
-    console.log(coinSelected, cryptoSelected, inputAmountValue)
+    try {
+        cryptoInfo.innerHTML = `
+            <div class="loader"></div>
+            <p class="info-p">Procesando...</p>
+        `
+
+        const response = await (await fetch(`https://api.binance.com/api/v3/ticker/24hr?symbol=${cryptoSelected}${coinSelected}`)).json();
+        const price = parseFloat(response.lastPrice);
+        const priceHigh = parseFloat(response.highPrice);
+        const priceLow = parseFloat(response.lowPrice);
+        const priceVariation = parseFloat(response.priceChangePercent);
+        const result = (inputAmountValue / price)
+
+        inputAmount.value != '' ?
+            cryptoInfo.innerHTML = `
+                <p class="info-p">El precio es: <span class="price">${price}</span></p>
+                <p class="info-p">El precio mas alto es: <span class="price">${priceHigh}</span></p>
+                <p class="info-p">El precio mas bajo es: <span class="price">${priceLow}</span></p>
+                <p class="info-p">Variacion de 24h: <span class="price">${priceVariation}</span></p>
+                <p class="info-p">Puede comprar: <span class="price">${result.toFixed(4)} ${cryptoSelected}</span></p>
+            `
+            :cryptoInfo.innerHTML = `
+                <p class="info-p">El precio es: <span class="price">${price}</span></p>
+                <p class="info-p">El precio mas alto es: <span class="price">${priceHigh}</span></p>
+                <p class="info-p">El precio mas bajo es: <span class="price">${priceLow}</span></p>
+                <p class="info-p">Variacion de 24h: <span class="price">${priceVariation}</span></p>
+            `
+
+
+        
+    } catch (error) {
+        console.log(error)
+    }
 
 });
