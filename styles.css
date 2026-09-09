@@ -8,6 +8,7 @@ body {
     margin: 0;
     font-family: sans-serif;
     background-color: #0c1427;
+    color: white;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -22,7 +23,7 @@ h1 {
     margin-top: 25px;
 }
 
-#container-body {
+#container-cotizador {
     flex: 1;
     display: flex;
     width: 100%;
@@ -58,13 +59,13 @@ h1 {
     height: auto;
     gap: 20px;
     padding: 25px;
-    background: #58168b6b;
+    background: #7c0ad38e;
 
     border-radius: 16px;
 }
 
 #crypto-form:hover {
-    box-shadow: 0px 0px 30px 5px #fe9a00;
+    box-shadow: 0px 0px 5px 5px #ffffff;
 }
 
 .form-input-container {
@@ -92,11 +93,12 @@ h1 {
     font-size: 16px;
     color: black;
     font-weight: bold;
-    background-color: #3498db;
+    background-color: #ffffff;
 }
 
 #form-btn:hover {
-    background: #fe9a00;
+    filter: invert(100%);
+    cursor: pointer;
 }
 
 #crypto-info {
@@ -109,12 +111,12 @@ h1 {
     padding: 25px;
     font-weight: bold;
 
-    background: #58168b6b;
+    background: #7c0ad38e;
     border-radius: 16px;
 }
 
 #crypto-info:hover {
-    box-shadow: 0px 0px 30px 5px #fe9a00;
+    box-shadow: 0px 0px 5px 5px #ffffff;
 }
 
 #crypto-info p:hover {
@@ -148,6 +150,55 @@ h1 {
     }
 }
 
+#section-api {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#api-title {
+    text-align: center;
+    margin-top: 100px;
+    color: #f59e0b;
+}
+
+#container-api {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-img-binance {
+    width: 40%;
+}
+
+#container-img-binance img:hover {
+    transform: rotate(-10deg);
+    transform-origin: 50% 50%;
+}
+
+#container-binance-info {
+    width: 50%;
+    text-align: justify;
+    line-height: 30px;
+}
+
+#container-disclaimer {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 90px;
+}
+
+#container-disclaimer h4 {
+    text-align: center;
+    color: #f59e0b;
+    font-weight: bold;
+}
+
+#container-disclaimer p {
+    line-height: 30px;
+}
+
 footer {
     width: 100%;
     padding: 20px 0;
@@ -164,7 +215,7 @@ footer a {
 }
 
 @media (max-width: 600px) {
-    #container-body {
+    #container-cotizador {
         flex-direction: column;
         gap: 50px;
     }
