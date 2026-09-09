@@ -29,17 +29,17 @@ cryptoForm.addEventListener('submit', async (e) => {
 
         inputAmount.value != '' ?
             cryptoInfo.innerHTML = `
-                <p class="info-p">El precio es: <span class="price">${price}</span></p>
-                <p class="info-p">El precio mas alto es: <span class="price">${priceHigh}</span></p>
-                <p class="info-p">El precio mas bajo es: <span class="price">${priceLow}</span></p>
-                <p class="info-p">Variacion de 24h: <span class="price">${priceVariation}</span></p>
+                <p class="info-p">Precio: <span class="price">${price} ${coinSelected}</span></p>
+                <p class="info-p">Precio mas alto: <span class="price">${priceHigh} ${coinSelected}</span></p>
+                <p class="info-p">Precio mas bajo: <span class="price">${priceLow} ${coinSelected}</span></p>
+                <p class="info-p">Variacion de 24h: <span class="price">${priceVariation} %</span></p>
                 <p class="info-p">Puede comprar: <span class="price">${result.toFixed(4)} ${cryptoSelected}</span></p>
             `
             :cryptoInfo.innerHTML = `
-                <p class="info-p">El precio es: <span class="price">${price}</span></p>
-                <p class="info-p">El precio mas alto es: <span class="price">${priceHigh}</span></p>
-                <p class="info-p">El precio mas bajo es: <span class="price">${priceLow}</span></p>
-                <p class="info-p">Variacion de 24h: <span class="price">${priceVariation}</span></p>
+                <p class="info-p">Precio: <span class="price">${price} ${coinSelected}</span></p>
+                <p class="info-p">Precio mas alto: <span class="price">${priceHigh} ${coinSelected}</span></p>
+                <p class="info-p">El precio mas bajo: <span class="price">${priceLow} ${coinSelected}</span></p>
+                <p class="info-p">Variacion de 24h: <span class="price">${priceVariation} %</span></p>
             `
 
 

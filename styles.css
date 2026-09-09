@@ -7,7 +7,7 @@
 body {
     margin: 0;
     font-family: sans-serif;
-    background-color: #0f172b;
+    background-color: #0c1427;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -17,7 +17,7 @@ body {
 }
 
 h1 {
-    color: #fe9a00;
+    color: #f59e0b;
     margin-bottom: 50px;
     margin-top: 25px;
 }
