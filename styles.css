@@ -189,7 +189,8 @@ h1 {
 #container-disclaimer {
     display: flex;
     flex-direction: column;
-    padding: 15px 90px;
+    align-items: center;
+    padding: 15px 20px;
 }
 
 #container-disclaimer h4 {
@@ -200,6 +201,8 @@ h1 {
 
 #container-disclaimer p {
     line-height: 30px;
+    width: 90%;
+    text-align: justify;
 }
 
 footer {
@@ -230,5 +233,25 @@ footer a {
     #container-cripto {
         flex-direction: column;
         width: 90%;
+    }
+
+    #container-api {
+        flex-direction: column;
+    }
+
+    #container-img-binance img {
+        width: 100%;
+    }
+
+    #container-binance-info {
+        width: 90%;
+    }
+
+    #container-disclaimer p {
+        width: 100%;
+    }
+
+    #disclaimer-p {
+        width: 100%;
     }
 }
