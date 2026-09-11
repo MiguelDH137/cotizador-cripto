@@ -24,6 +24,7 @@ https://migueldh137.github.io/cotizador-cripto/
 > CriptoZador obtiene las cotizaciones y métricas de mercado de forma directa a través de la API pública Spot de Binance, una de las plataformas de intercambio de criptoactivos con mayor volumen y liquidez a nivel global
 
 **EndPoint utilizado:**
+> [documentación del endpoint](https://developers.binance.com/en/docs/catalog/core-trading-spot-trading/api/rest-api/market#ticker24hr)
 - Se utiliza el endpoint de ticker de 24 horas (`/api/v3/ticker/24hr`), el cual proporciona (entre otros datos) la información sobre el último precio, el precio máximo y mínimo de las ultimas 24h, y el porcentaje de variación.
 
 - A partir de la selección del usuario en la interfaz, se concatenan la criptomoneda y la divisa (por ejemplo: `BTC + USDT = BTCUSDT`), opteniendo el siguiente endpoint `https://api.binance.com/api/v3/ticker/24hr?symbol=${cryptoSelected}${coinSelected}`
